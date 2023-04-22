@@ -1,4 +1,6 @@
 /* WRITE YOUR JS HERE... YOU MAY REQUIRE MORE THAN ONE JS FILE. IF SO SAVE IT SEPARATELY IN THE SCRIPTS DIRECTORY */
+
+
 const catChoicePip = document.getElementById("catChoicePip");
 const catChoiceIvy = document.getElementById("catChoiceIvy");
 const pipChoices = document.getElementById("pipChoices");
@@ -21,28 +23,24 @@ catChoiceIvy.addEventListener("change", function() {
 });
 
 const pipPlaytimeSelect = document.querySelector('#pipPlaytime');
-pipPlaytimeSelect.addEventListener('change', handlePlaytimeSelect);
+pipPlaytimeSelect.addEventListener('change', pipPlaytimeSelect);
 
 const ivyPlaytimeSelect = document.querySelector('#ivyPlaytime');
-ivyPlaytimeSelect.addEventListener('change', handlePlaytimeSelect);
+ivyPlaytimeSelect.addEventListener('change', ivyPlaytimeSelect);
 
-pipPlaytime.addEventListener("change", function() {
-    if (pipPlaytime.checked) {
-        pipChoices.style.display = "none";
-     document.getElementById("catChoice").style.display = "none";
-     document.getElementById("ivyChoices").style.display = "none";
-    }
-});
 
-ivyPlaytime.addEventListener("change", function() {
-    if (ivyPlaytime.checked) {
-        ivyChoices.style.display = "none";
-     document.getElementById("catChoice").style.display = "none";
-     document.getElementById("pipChoices").style.display = "none";
+const pipInputs = document.querySelectorAll('#pipChoices input');
+
+pipInputs.forEach(input => {
+  input.addEventListener('change', function() {
+    if (input.checked) {
+      input.style.display = 'none';
+      pipChoices.style.display = "none";
     }
   });
+});
 
-
+const ivyInputs = document.querySelectorAll('#ivyChoices input');
 
 ivyInputs.forEach(input => {
   input.addEventListener('change', function() {
@@ -51,12 +49,6 @@ ivyInputs.forEach(input => {
       ivyChoices.style.display = "none";
     }
   });
-});
-
-ivyChoices.addEventListener("change", function() {
-    if (ivyChoices.checked) {
-        ivyChoices.style.display = "none";
-    }
 });
 
 
@@ -182,3 +174,4 @@ pipChoices.addEventListener('change', function(event) {
     pipCloset.style.display = 'block';
   }
 });
+
