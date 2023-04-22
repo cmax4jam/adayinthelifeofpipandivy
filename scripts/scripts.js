@@ -40,11 +40,24 @@ ivyPlaytime.addEventListener("change", function() {
      document.getElementById("catChoice").style.display = "none";
      document.getElementById("pipChoices").style.display = "none";
     }
+  });
+
+
+
+ivyInputs.forEach(input => {
+  input.addEventListener('change', function() {
+    if (input.checked) {
+      input.style.display = 'none';
+      ivyChoices.style.display = "none";
+    }
+  });
 });
 
-
-
-
+ivyChoices.addEventListener("change", function() {
+    if (ivyChoices.checked) {
+        ivyChoices.style.display = "none";
+    }
+});
 
 
 
