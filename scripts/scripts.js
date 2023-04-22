@@ -1,6 +1,4 @@
 /* WRITE YOUR JS HERE... YOU MAY REQUIRE MORE THAN ONE JS FILE. IF SO SAVE IT SEPARATELY IN THE SCRIPTS DIRECTORY */
-
-
 const catChoicePip = document.getElementById("catChoicePip");
 const catChoiceIvy = document.getElementById("catChoiceIvy");
 const pipChoices = document.getElementById("pipChoices");
@@ -114,8 +112,6 @@ ivyChoices.addEventListener('change', function(event) {
 
 
 
-
-
 // get references to the relevant elements
 const pipObjectInteractions = document.getElementById('pipChoices');
 const pipCouch = document.getElementById('pipCouch');
@@ -175,3 +171,28 @@ pipChoices.addEventListener('change', function(event) {
   }
 });
 
+
+const pipBathroomBreakIn = document.getElementById('pipBathroomBreakIn');
+const pipBathroomInfiltrate = document.getElementById('pipBathroomInfiltrate');
+
+//if cats break into bathroom
+pipBathroomDoor.addEventListener('change', function(event) {
+  // get the selected value
+  pipBathroomDoor.style.display = 'none';
+  const selectedValue = event.target.value;
+  if (selectedValue === pipBathroomBreakIn) {
+    pipBathroomInfiltrate.style.display = 'block';
+  }
+});
+
+const ivyBathroomInfiltrate = document.getElementById('ivyBathroomInfiltrate');
+const ivyBathroomBreakIn = document.getElementById('ivyBathroomBreakIn');
+
+ivyBathroomDoor.addEventListener('change', function(event) {
+  // get the selected value
+  ivyBathroomDoor.style.display = 'none';
+  const selectedValue = event.target.value;
+  if (selectedValue === ivyBathroomBreakIn) {
+    ivyBathroomInfiltrate.style.display = 'block';
+  }
+});
