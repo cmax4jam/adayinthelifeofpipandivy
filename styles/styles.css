@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Berkshire+Swash&family=Roboto&display=swap');
 
 body {
-    background-color: #FEBDC6;
+    background-color: #FFE2E5;
   }
 
 fieldset {
@@ -86,3 +86,151 @@ button:hover {
   flex-direction: column;
   justify-content: center;
 }
+
+#pipChoices {
+    margin: 20px;
+    border: none;
+  }
+  
+  legend {
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
+    color: #167544;
+    font-weight: bold;
+    font-size: 36px;
+  }
+  
+  #pipChoiceCouch {
+    position: fixed;
+    top: 200px;
+    left: 40px;
+  }
+  
+  #pipChoiceBed {
+    position: fixed;
+    top: 400px;
+    left: 700px;
+  }
+  
+  #pipChoiceFoodBowl {
+    position: fixed;
+    top: 800px;
+    left: 50px;
+  }
+  
+  #pipChoiceWaterBowl {
+    position: fixed;
+    top: 790px;
+    left: 50px;
+  }
+  
+  #pipChoiceKitchenCounter {
+    position: fixed;
+    top: 800px;
+    left: 300px;
+  }
+  
+  #pipChoiceLitterBox {
+    position: fixed;
+    top: 800px;
+    left: 700px;
+  }
+  
+  #pipChoiceBeanBag {
+    position: fixed;
+    top: 200px;
+    left: 700px;
+  }
+  
+  #pipChoicePlants {
+    position: fixed;
+    top: 360px;
+    left: 270px;
+  }
+  
+  #pipChoiceBathroomDoor {
+    position: fixed;
+    top: 180px;
+    left: 500px;
+  }
+  
+  #pipChoiceWindow {
+    position: fixed;
+    top: 450px;
+    left: 40px;
+  }
+  
+  #pipChoiceCloset {
+    position: fixed;
+    top: 800px;
+    left: 500px;
+  }
+
+  
+  
+  #ivyChoiceCouch {
+    position: fixed;
+    top: 200px;
+    left: 40px;
+  }
+  
+  #ivyChoiceBed {
+    position: fixed;
+    top: 400px;
+    left: 700px;
+  }
+  
+  #ivyChoiceFoodBowl {
+    position: fixed;
+    top: 800px;
+    left: 50px;
+  }
+  
+  #ivyChoiceWaterBowl {
+    position: fixed;
+    top: 790px;
+    left: 50px;
+  }
+  
+  #ivyChoiceKitchenCounter {
+    position: fixed;
+    top: 800px;
+    left: 300px;
+  }
+  
+  #ivyChoiceLitterBox {
+    position: fixed;
+    top: 800px;
+    left: 700px;
+  }
+  
+  #ivyChoiceBeanBag {
+    position: fixed;
+    top: 200px;
+    left: 700px;
+  }
+  
+  #pipChoicePlants {
+    position: fixed;
+    top: 360px;
+    left: 270px;
+  }
+  
+  #ivyChoiceBathroomDoor {
+    position: fixed;
+    top: 180px;
+    left: 500px;
+  }
+  
+  #ivyChoiceWindow {
+    position: fixed;
+    top: 450px;
+    left: 40px;
+  }
+  
+  #ivyChoiceCloset {
+    position: fixed;
+    top: 800px;
+    left: 500px;
+  }
+  
