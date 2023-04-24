@@ -72,11 +72,11 @@ button:hover {
 }
 
 #catChoice #catChoicePip + label {
-  background-image: url('/Users/adelynereynolds/Desktop/CM523/cm523-project-starter/images/Piploaf.png');
+  background-image: url('./images/Piploaf.png');
 }
 
 #catChoice #catChoiceIvy + label {
-  background-image: url('/Users/adelynereynolds/Desktop/CM523/cm523-project-starter/images/ivyloaf.png');
+  background-image: url('./images/ivyloaf.png');
 }
 
 #catChoice label {
