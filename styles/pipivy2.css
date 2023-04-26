@@ -11,9 +11,47 @@ html {
   *::after {
     box-sizing: inherit;
   }
+  header {
+    text-align: center;
+    font-family: 'Berkshire Swash', cursive;
+    color: #167544;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+#gameboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px;
+}
+.object {
+  border: 2px solid black;
+  padding: 10px;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+select {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+
+
+body {
+   background-color: #FFE2E5;
+}
 
   .couch {
     background-image: url('../images/pipivycouch.svg');
+   
   }
   
   .bed {
@@ -42,6 +80,7 @@ html {
 
   .bean-bag{
     background-image: url('../images/beanBag.svg');
+    
   }
 
   .litter-box{
