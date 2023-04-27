@@ -1,6 +1,6 @@
 const gameboard = document.getElementById('gameboard');
 const catName = localStorage.getItem('catChoice');
-let catObjects = {};
+let catObjects = [];
 if (catName == 'pip' ) {
   catObjects = [
     { value: 'couch', label: 'Couch', array: ['loaf', 'scratch', 'hide underneath', 'get scared of'] },
@@ -62,10 +62,10 @@ buildGame();
 
 
 function displayArray(array) {
-  // Hide the radio buttons
-  radioButtons.forEach(function(radioButton) {
-    radioButton.style.display = 'none';
-  });
+  // Hide the radio buttons (should i do this?)
+ // radioButtons.forEach(function(radioButton) {
+ //   radioButton.style.display = 'none';
+//  });
   
   // Create a div to display the array
   const arrayDiv = document.createElement('div');
