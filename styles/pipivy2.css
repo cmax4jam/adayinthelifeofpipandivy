@@ -20,29 +20,30 @@ html {
 }
 
 #gameboard {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  margin: 20px;
-}
-.object {
-  border: 2px solid black;
-  padding: 10px;
-  width: 200px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-h3 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-select {
-  margin-top: 20px;
-  font-size: 1.2rem;
 }
 
+#gameboard input[type=radio] {
+  display: none;
+}
+
+#gameboard label {
+  display: block;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#gameboard input[type=radio]:checked + label {
+  background-color: #ccc;
+}
+
+body {
+   background-color: #FFE2E5;
+}
 
 
 body {
@@ -70,7 +71,7 @@ body {
     background-image: url('../images/windowpipivy.svg');
   }
 
-  .water-bowl{
+ /* .water-bowl{
 
   }
 
@@ -93,26 +94,8 @@ body {
 
   .bathroom-door{
 
-  }
+  } */
 
   
-  #gameboard {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 10px;
-    justify-items: center;
-    align-items: center;
-    margin: 50px auto;
-    max-width: 800px;
-  }
-  
-  #gameboard > div {
-    border: 1px solid #333;
-    width: 150px;
-    height: 200px;
-    background-color: white;
-    position: relative;
-    overflow: hidden;
-  }
+
   
