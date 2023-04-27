@@ -71,12 +71,12 @@ body {
     background-image: url('../images/windowpipivy.svg');
   }
 
- /* .water-bowl{
-
+  .water-bowl{
+    background-image: url('../images/waterbowl.svg');
   }
 
   .food-bowl{
-
+    background-image: url('../images/foodbowl.svg');
   }
 
   .bean-bag{
@@ -85,16 +85,16 @@ body {
   }
 
   .litter-box{
-
+    background-image: url('../images/litterbox1.svg');
   }
 
   .closet{
-
+    background-image: url('../images/closet.svg');
   }
 
   .bathroom-door{
-
-  } */
+    background-image: url('../images/bathroomdoor.svg');
+  } 
 
   
 
