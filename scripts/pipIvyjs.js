@@ -1,64 +1,68 @@
 const gameboard = document.getElementById('gameboard');
 const catName = localStorage.getItem('catChoice');
 let catObjects = [];
-if (catName == 'pip' ) {
-  catObjects = [
-    { value: 'couch', label: 'Couch', array: ['loaf', 'scratch', 'hide underneath', 'get scared of'] },
-    { value: 'bed', label: 'Bed', array: ['loaf', 'tear at quilt', 'meow at Ivy'] }, 
-    { value: 'counter', label: 'Counter', array: ['loaf', 'jump to window'] },
-    { value: 'window', label: 'Window', array: ['watch birds', 'jump on sill'] },
-    {value: 'water bowl', label: 'water bowl', array: ['have a little drink', 'get wet'] },
-    {value: 'food bowl', label: 'food bowl', array: ['snack', 'throw up food'] },
-    {value: 'bean bag', label: 'Bean bag', array:['loaf', 'check on hidden hair elastics'] },
-    {value: 'closet', label: 'Closet', array: ['get fur on clothes', 'loaf on purses', 'play with the belts'] },
-    {value: 'bathroom door', label: 'bathroom door', array: ['meow at door', 'break in'] },
-    {value: 'litter box', label: 'Litter box', array: ['poop', 'sleep in', 'hide from ivy'] },
-    {value: 'plants', label: 'Plants', array: ['chew and throw up', 'circle suspiciously', 'get scared of'] }
+let pipData = [
+    { houseObject: 'couch', label: 'couch', array: ['loaf', 'scratch', 'hide underneath', 'get scared of'] },
+    { houseObject: 'bed', label: 'bed', array: ['loaf', 'tear at quilt', 'meow at Ivy'] }, 
+    { houseObject: 'counter', label: 'counter', array: ['loaf', 'jump to window'] },
+    { houseObject: 'window', label: 'window', array: ['watch birds', 'jump on sill'] },
+    {houseObject: 'water bowl', label: 'water bowl', array: ['have a little drink', 'get wet'] },
+    {houseObject: 'food bowl', label: 'food bowl', array: ['snack', 'throw up food'] },
+    {houseObject: 'bean bag', label: 'bean bag', array:['loaf', 'check on hidden hair elastics'] },
+    {houseObject: 'closet', label: 'closet', array: ['get fur on clothes', 'loaf on purses', 'play with the belts'] },
+    {houseObject: 'bathroom door', label: 'bathroom door', array: ['meow at door', 'break in'] },
+    {houseObject: 'litter box', label: 'litter box', array: ['poop', 'sleep in', 'hide from ivy'] },
+    {houseObject: 'plants', label: 'plants', array: ['chew and throw up', 'circle suspiciously', 'get scared of'] }
   ];
-} else if (catName == 'ivy') {
-  catObjects = [
-    { value: 'couch', label: 'Couch', array:  ['loaf', 'scratch', 'make biscuits', 'meow at aimlessly'] },
-    { value: 'bed', label: 'Bed', array: ['loaf', 'mess up blankets', 'cuddle with Pip'] },
-    { value: 'counter', label: 'Counter', array: ['knock over cups', 'play with stove'] },
-    { value: 'window', label: 'Window', array: ['watch birds', 'scratch screen', 'climb into'] },
-    {value: 'water bowl', label: 'water bowl', array: ['have a little drink', 'get water everywhere'] },
-    {value: 'food bowl', label: 'food bowl', array: ['snack', 'get food everywhere'] },
-    {value: 'bean bag', label: 'Bean bag', array: ['nap', 'make biscuits', 'jump on'] },
-    {value: 'closet', label: 'Closet', array: ['mess up clothes', 'plan world domination', 'play with the belts'] },
-    {value: 'bathroom door', label: 'bathroom door', array: ['scratch', 'break in'] },
-    {value: 'litter box', label: 'Litter box', array: ['poop', 'drag poop everywhere', 'dig around'] },
-    {value: 'plants', label: 'Plants', array: ['sniff', 'knock over', 'climb'] }
-  ];
-}
 
-function buildGame() {
-  const objects = [
-    { value: 'couch', label: 'Couch' },
-    { value: 'bed', label: 'Bed' },
-    { value: 'counter', label: 'Counter' },
-    { value: 'window', label: 'Window' },
-    { value: 'water bowl', label: 'Water Bowl' },
-    { value: 'food bowl', label: 'Food Bowl' },
-    { value: 'bean bag', label: 'Bean Bag' },
-    { value: 'closet', label: 'Closet' },
-    { value: 'bathroom door', label: 'Bathroom Door' },
-    { value: 'litter box', label: 'Litter Box' },
-    { value: 'plants', label: 'Plants' },
+let ivyData = [
+    {houseObject: 'couch', label: 'couch', array:  ['loaf', 'scratch', 'make biscuits', 'meow at aimlessly'] },
+    {houseObject: 'bed', label: 'bed', array: ['loaf', 'mess up blankets', 'cuddle with Pip'] },
+    {houseObject: 'counter', label: 'counter', array: ['knock over cups', 'play with stove'] },
+    {houseObject: 'window', label: 'window', array: ['watch birds', 'scratch screen', 'climb into'] },
+    {houseObject: 'water bowl', label: 'water bowl', array: ['have a little drink', 'get water everywhere'] },
+    {houseObject: 'food bowl', label: 'food bowl', array: ['snack', 'get food everywhere'] },
+    {houseObject: 'bean bag', label: 'bean bag', array: ['nap', 'make biscuits', 'jump on'] },
+    {houseObject: 'closet', label: 'closet', array: ['mess up clothes', 'plan world domination', 'play with the belts'] },
+    {houseObject: 'bathroom door', label: 'bathroom door', array: ['scratch', 'break in'] },
+    {houseObject: 'litter box', label: 'litter box', array: ['poop', 'drag poop everywhere', 'dig around'] },
+    {houseObject: 'plants', label: 'plants', array: ['sniff', 'knock over', 'climb'] }
   ];
+
+const startGameObjects = [
+  { thing: 'couch', label: 'couch' },
+  { thing: 'bed', label: 'bed' },
+  { thing: 'counter', label: 'counter' },
+  { thing: 'window', label: 'window' },
+  { thing: 'waterBowl', label: 'water bowl' },
+  { thing: 'foodBowl', label: 'food bowl' },
+  { thing: 'beanBag', label: 'bean bag' },
+  { thing: 'closet', label: 'closet' },
+  { thing: 'bathroomDoor', label: 'bathroom door' },
+  { thing: 'litterBox', label: 'litter box' },
+  { thing: 'plants', label: 'plants' },
+];
+
+function buildGame(objects) {
+  gameboard.innerHTML ='';
+  console.log(objects);
   objects.forEach(function(object) {
+    let containerDiv = document.createElement('div');
     let objectChoice = document.createElement("input");
     objectChoice.type = "radio";
     objectChoice.name = "objectsRadioButtons";
-    objectChoice.value = object.value;
-    gameboard.appendChild(objectChoice);
-  
+    containerDiv.setAttribute('class', object.thing );
+    objectChoice.setAttribute('value', object.thing);
+    objectChoice.thing = object.thing;
+    gameboard.appendChild(containerDiv);
+    containerDiv.appendChild(objectChoice); 
     let label = document.createElement("label");
     label.innerHTML = object.label;
     gameboard.appendChild(label);
   });
 }
 
-buildGame();
+buildGame(startGameObjects);
 
 
 function displayArray(array) {
@@ -74,7 +78,39 @@ function displayArray(array) {
  }
 
 // Add event listener to all radio buttons
-const radioButtons = document.querySelectorAll('input[name="objectsRadioButtons"]');
+const radioButtons = Array.from(document.querySelectorAll('input[name="objectsRadioButtons"]'));
+
+radioButtons.forEach( button => {
+  button.addEventListener('change', function() {
+    catAction(this.value, catName);
+  });
+});
+
+
+function catAction(thing, cat){
+  console.log(thing + ' clicked for ' + cat);
+  let catData = null;
+ if (cat == 'pip') {
+  catData = pipData;
+ }
+ else if (cat == 'ivy') {
+  catData = ivyData;
+ }
+catData.forEach( obj => {
+  if (obj.houseObject == thing) {
+    console.log(catData.array);
+    buildGame(catData.array);
+
+  }
+});
+
+
+
+}
+
+
+
+/*
 radioButtons.forEach(function(radioButton) {
   radioButton.addEventListener('click', function() {
     console.log('Radio button clicked');
@@ -126,5 +162,5 @@ displayArray(plantsArray);
   })
 });
      
-
+*/
 

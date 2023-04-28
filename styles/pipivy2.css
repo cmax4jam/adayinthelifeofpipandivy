@@ -11,34 +11,118 @@ html {
   *::after {
     box-sizing: inherit;
   }
+
+  @media screen and (max-width: 768px) {
+    header {
+      font-size: 30px;
+      padding: 5px 10px;
+    }
+  }
+
   header {
     text-align: center;
     font-family: 'Berkshire Swash', cursive;
     color: #167544;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 30px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    background: linear-gradient(45deg, #D1F3C8);
+    display: block;
+    margin-top: 20px;
+
+
+
+
+    
+  }
+
+#catChoice {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 4px;
+  font-family: 'Alice', serif;
+  color: #F9C374;
+  border: none;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px;
+  margin-top: 30px;
+  text-align: center;
+  align-items: center;
+
 }
+
+#catChoice img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  border-color: #167544;
+  padding: 40px; 
+}
+
+#catChoice legend {
+  background-color: #FDF9B4;
+  padding: 1rem;
+  border: 2px solid #F9C374;
+  border-radius: 1rem;
+}
+
 
 #gameboard {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+#gameboard a {
+  display: block;
+  background-color: #167544;
+  border-color: #D1F3C8;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 60px;
+  height: 40px;
+  display: flex;
+  margin-top: 20px;
+  letter-spacing: 2px;
+
 }
 
 #gameboard input[type=radio] {
-  display: none;
+ /* display: none;*/
 }
 
+
 #gameboard label {
-  display: block;
-  padding: 10px;
-  background-color: #fff;
+  margin-top: 30px;
   border: 2px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  width: 15rem;
+  height: 20rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 50px;
+  background-color: #D1F3C8;
 }
+
 #gameboard input[type=radio]:checked + label {
-  background-color: #ccc;
+  background-color: green;
 }
 
 body {
@@ -52,48 +136,82 @@ body {
 
   .couch {
     background-image: url('../images/pipivycouch.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
    
   }
   
   .bed {
      background-image: url('../images/pipIvyBed.svg');
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
   }
 
   .plants {
     background-image: url('../images/pipIvyplants.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .counter{
     background-image: url('../images/pipIvyCounter.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .window{
     background-image: url('../images/windowpipivy.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  .water-bowl{
+  .waterBowl{
     background-image: url('../images/waterbowl.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  .food-bowl{
+  .foodBowl{
     background-image: url('../images/foodbowl.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  .bean-bag{
+
+  .beanBag{
     background-image: url('../images/beanBag.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     
   }
 
-  .litter-box{
+  .litterBox{
     background-image: url('../images/litterbox1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .closet{
     background-image: url('../images/closet.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
-  .bathroom-door{
+  .bathroomDoor{
     background-image: url('../images/bathroomdoor.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   } 
 
   
