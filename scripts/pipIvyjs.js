@@ -28,9 +28,8 @@ let ivyData = [
     {houseObject: 'litter box', label: 'litter box', array: ['poop', 'drag poop everywhere', 'dig around'] },
     {houseObject: 'plants', label: 'plants', array: ['sniff', 'knock over', 'climb'] }
   ];
-
-const startGameObjects = [
-  { thing: 'couch', label: 'couch' },
+const startGameObjects = 
+[ { thing: 'couch', label: 'couch' },
   { thing: 'bed', label: 'bed' },
   { thing: 'counter', label: 'counter' },
   { thing: 'window', label: 'window' },
@@ -43,11 +42,13 @@ const startGameObjects = [
   { thing: 'plants', label: 'plants' },
 ];
 
+
 function buildGame(objects) {
   gameboard.innerHTML ='';
   console.log(objects);
   objects.forEach(function(object) {
     let containerDiv = document.createElement('div');
+    containerDiv.classList.add('houseStuff'); 
     let objectChoice = document.createElement("input");
     objectChoice.type = "radio";
     objectChoice.name = "objectsRadioButtons";
@@ -90,18 +91,20 @@ radioButtons.forEach( button => {
 function catAction(thing, cat){
   console.log(thing + ' clicked for ' + cat);
   let catData = null;
- if (cat == 'pip') {
+ if (cat === "pip") {
   catData = pipData;
  }
- else if (cat == 'ivy') {
+ else if (cat === 'ivy') {
   catData = ivyData;
  }
 catData.forEach( obj => {
   if (obj.houseObject == thing) {
     console.log(catData.array);
+   
     buildGame(catData.array);
 
   }
+
 });
 
 
