@@ -41,7 +41,7 @@ html {
   }
 
 
-#catChoice img {
+.catChoice img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,12 +51,12 @@ html {
   padding: 40px; 
 }
 
-#catChoice legend {
-  background-color: #FDF9B4;
+.catChoice legend {
+  /* background-color: #FDF9B4;
   padding: 1rem;
   border: 2px solid #F9C374;
   border-radius: 1rem;
-  color: #F9C374;
+  color: #F9C374; */
 }
 
 
@@ -72,54 +72,65 @@ html {
 
 #gameboard {
   display: center;
-  
   justify-content: center;
   align-items: center;
   justify-content: center;
   text-align: center;
   
+ padding: 5px;
+}
 
+#catz {
+  border: none;
+  padding: 1rem;
+}
+
+#catChoiceLabel {
+  font-family: 'Alice', serif;
+  color: #167544;
+  border: none;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: #FDF9B4;
+  padding: 1rem;
+  border: 2px solid #F9C374;
+  border-radius: 1rem;
+  color: #F9C374;
+}
+
+#catChoice-items {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.catChoice {
+ max-width: 50%;
 }
 
 
-  #catChoice {
-    display: flex;
-    justify-content: center;
-    letter-spacing: 4px;
-    font-family: 'Alice', serif;
-    color: #167544;
-    border: none;
-    font-weight: bold;
-    font-size: 30px;
-    padding: 10px;
-    margin-top: 30px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  
-  }
+.catChoice a {
+  display: flex;
+  background-color: #167544;
+  border-color: #D1F3C8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 60px;
+  height: 40px;
+  margin-top: 50px;
+  letter-spacing: 2px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
 
+}
 
-  #catChoice a {
-    display: flex;
-    background-color: #167544;
-    border-color: #D1F3C8;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-    width: 60px;
-    height: 40px;
-    margin-top: 50px;
-    letter-spacing: 2px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-  
-  }
-
-  a[href="gameStart.html"] {
+a[href="gameStart.html"] {
   display: flex;
   background-color: #167544;
   border-color: #D1F3C8;
@@ -136,11 +147,7 @@ html {
 
 } 
 
-
-
-
-
-#gameboard label {
+.houseStuff {
   margin-top: 30px;
   border: 2px solid #ccc;
   border-radius: 5px;
@@ -155,6 +162,25 @@ html {
   background-color: #D1F3C8;
   background-size: contain;
   background-position: center center;
+}
+
+
+
+#gameboard label {
+  /* margin-top: 30px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  width: 15rem;
+  height: 20rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 50px;
+  background-color: #D1F3C8;
+  background-size: contain;
+  background-position: center center; */
 }
 
 #gameboard input[type=radio]:checked + label {
@@ -182,85 +208,85 @@ body {
   background-image: url('../images/pipivycouch.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom;
-  position: contain;
+  background-position: center;
+  /* position: contain;
   object-fit: cover;
-  display: inline;
+  display: inline; */
 }
 
 
   
-  .bed {
-     background-image: url('../images/pipIvyBed.svg');
-     background-size: contain;
-     background-repeat: no-repeat;
-     background-position: center;
-  }
-
-  .plants {
-    background-image: url('../images/pipIvyplants.svg');
+.bed {
+    background-image: url('../images/pipIvyBed.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-  }
+}
 
-  .counter{
-    background-image: url('../images/pipIvyCounter.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+.plants {
+  background-image: url('../images/pipIvyplants.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .window{
-    background-image: url('../images/windowpipivy.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+.counter{
+  background-image: url('../images/pipIvyCounter.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .waterBowl{
-    background-image: url('../images/waterbowl.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+.window{
+  background-image: url('../images/windowpipivy.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .foodBowl{
-    background-image: url('../images/foodbowl.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+.waterBowl{
+  background-image: url('../images/waterbowl.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.foodBowl{
+  background-image: url('../images/foodbowl.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 
-  .beanBag{
-    background-image: url('../images/beanBag.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    
-  }
+.beanBag{
+  background-image: url('../images/beanBag.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
 
-  .litterBox{
-    background-image: url('../images/litterbox1.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+.litterBox{
+  background-image: url('../images/litterbox1.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .closet{
-    background-image: url('../images/closet.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+.closet{
+  background-image: url('../images/closet.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  .bathroomDoor{
-    background-image: url('../images/bathroomdoor.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  } 
+.bathroomDoor{
+  background-image: url('../images/bathroomdoor.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+} 
 
   
 

@@ -52,14 +52,15 @@ function buildGame(objects) {
     let objectChoice = document.createElement("input");
     objectChoice.type = "radio";
     objectChoice.name = "objectsRadioButtons";
-    containerDiv.setAttribute('class', object.thing );
-    objectChoice.setAttribute('value', object.thing);
+    containerDiv.classList.add(object.thing );
+    objectChoice.setAttribute("id", object.thing);
     objectChoice.thing = object.thing;
     gameboard.appendChild(containerDiv);
     containerDiv.appendChild(objectChoice); 
     let label = document.createElement("label");
+    label.setAttribute("for", object.thing)
     label.innerHTML = object.label;
-    gameboard.appendChild(label);
+    containerDiv.appendChild(label);
   });
 }
 
