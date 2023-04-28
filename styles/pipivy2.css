@@ -39,32 +39,7 @@ html {
     display: block;
     margin-top: 20px;
   }
- 
 
- #gameboard #catChoice {
-  display: block;
-  justify-content: center;
-  align-items: center;
-  
-  }
-
-#catChoice {
-  justify-content: center;
-  letter-spacing: 4px;
-  font-family: 'Alice', serif;
-  color: #167544;
-  border: none;
-  font-weight: bold;
-  font-size: 30px;
-  padding: 10px;
-  margin-top: 30px;
-  text-align: center;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  
-
-}
 
 #catChoice img {
   display: flex;
@@ -85,38 +60,84 @@ html {
 }
 
 
-#gameboard {
-  display: grid;
-  grid-template-columns: repeat;
-  grid-template-rows: repeat;
+#index-page #gameboard {
   grid-gap: 10px;
   justify-content: center;
   align-items: center;
   justify-content: center;
-  
-  
+  text-align: center;
+  display: block;
+
 }
 
-#gameboard a {
-  display: block;
+#gameboard {
+  display: center;
+  
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+
+}
+
+
+  #catChoice {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 4px;
+    font-family: 'Alice', serif;
+    color: #167544;
+    border: none;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+
+  #catChoice a {
+    display: flex;
+    background-color: #167544;
+    border-color: #D1F3C8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 60px;
+    height: 40px;
+    margin-top: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+  
+  }
+
+  a[href="gameStart.html"] {
+  display: flex;
   background-color: #167544;
   border-color: #D1F3C8;
   color: white;
   padding: 10px 20px;
-  text-decoration: none;
   border-radius: 5px;
-  margin-top: 10px;
   width: 60px;
   height: 40px;
-  display: flex;
   margin-top: 20px;
   letter-spacing: 2px;
+  text-align: center;
+  position: center;
+  margin:0 auto;
 
-}
+} 
 
-#gameboard input[type=radio] {
- /* display: none;*/
-}
+
+
 
 
 #gameboard label {
@@ -132,6 +153,8 @@ html {
   vertical-align: middle;
   margin-right: 50px;
   background-color: #D1F3C8;
+  background-size: contain;
+  background-position: center center;
 }
 
 #gameboard input[type=radio]:checked + label {
@@ -143,7 +166,7 @@ body {
 }
 
 
-.startGameObjects {
+.startGameObjects #gameboard {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -154,14 +177,18 @@ body {
 
 
 
-.couch label {
+
+.couch {
   background-image: url('../images/pipivycouch.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   position: contain;
   object-fit: cover;
+  display: inline;
 }
+
+
   
   .bed {
      background-image: url('../images/pipIvyBed.svg');

@@ -10,7 +10,7 @@ let pipData = [
     {houseObject: 'food bowl', label: 'food bowl', array: ['snack', 'throw up food'] },
     {houseObject: 'bean bag', label: 'bean bag', array:['loaf', 'check on hidden hair elastics'] },
     {houseObject: 'closet', label: 'closet', array: ['get fur on clothes', 'loaf on purses', 'play with the belts'] },
-    {houseObject: 'bathroom door', label: 'bathroom door', array: ['meow at door', 'break in'] },
+    {houseObject: 'bathroom door', label: 'bathroom door', array: ['meow at door', 'break in and lick sink', 'break in and drink from toilet', 'break in and play in tub'] },
     {houseObject: 'litter box', label: 'litter box', array: ['poop', 'sleep in', 'hide from ivy'] },
     {houseObject: 'plants', label: 'plants', array: ['chew and throw up', 'circle suspiciously', 'get scared of'] }
   ];
@@ -24,7 +24,7 @@ let ivyData = [
     {houseObject: 'food bowl', label: 'food bowl', array: ['snack', 'get food everywhere'] },
     {houseObject: 'bean bag', label: 'bean bag', array: ['nap', 'make biscuits', 'jump on'] },
     {houseObject: 'closet', label: 'closet', array: ['mess up clothes', 'plan world domination', 'play with the belts'] },
-    {houseObject: 'bathroom door', label: 'bathroom door', array: ['scratch', 'break in'] },
+    {houseObject: 'bathroom door', label: 'bathroom door', array: ['scratch', 'break in and steal tampons', 'break in and play with hanging towels'] },
     {houseObject: 'litter box', label: 'litter box', array: ['poop', 'drag poop everywhere', 'dig around'] },
     {houseObject: 'plants', label: 'plants', array: ['sniff', 'knock over', 'climb'] }
   ];
